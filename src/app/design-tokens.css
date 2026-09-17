@@ -1,0 +1,998 @@
+/**
+ * ----------------------------------------------------------------------------
+ * DESIGN SYSTEM CSS TOKENS
+ * ----------------------------------------------------------------------------
+ * AUTO-GENERATED from design-tokens.tokens.json
+ * Generated at: 2026-09-17T14:00:56.771Z
+ * 
+ * CORE RULES:
+ * 1. Primitive Colors (--color-primitive-*):
+ *    Foundations only. DO NOT USE directly in UI components.
+ * 
+ * 2. UI Color Roles (--color-ui-*, --color-role-*):
+ *    For direct UI consumption. Roles such as "primary color2" and
+ *    "secondary color2" are the primary colors for UI components.
+ * 
+ * 3. Spacing & Elevation (--spacing-*, --shadow-*):
+ *    Standardized design system scales.
+ * ----------------------------------------------------------------------------
+ */
+
+:root {
+  /* ==========================================================================
+     1. FOUNDATIONAL PRIMITIVE COLORS (DO NOT APPLY DIRECTLY TO UI)
+     --------------------------------------------------------------------------
+     ⚠️ ARCHITECTURE RULE:
+     These values represent the chromatic foundation of the design system.
+     They MUST NOT be applied directly to UI components.
+     Use the semantic UI Color Roles defined in Section 2 instead.
+     ========================================================================== */
+
+
+  /* Primitive Palette: key colors group */
+  --color-primitive-key-colors-group-primary-key-color: #36a477;
+  --color-primitive-key-colors-group-secondary-key-color: #369aa4;
+  --color-primitive-key-colors-group-tertiary-color: #36a440;
+  --color-primitive-key-colors-group-neutral-color: #1e1e1e;
+  --color-primitive-key-colors-group-neutral-variant: #3f3737;
+  --color-primitive-key-colors-group-error-color: #ca0707;
+
+  /* Primitive Palette: primary color pallette */
+  --color-primitive-primary-color-pallette-primary-0: #000000;
+  --color-primitive-primary-color-pallette-primary-10: #0d261c;
+  --color-primitive-primary-color-pallette-primary-20: #194d38;
+  --color-primitive-primary-color-pallette-primary-30: #267354;
+  --color-primitive-primary-color-pallette-primary-40: #33996f;
+  --color-primitive-primary-color-pallette-primary-50: #3fc08b;
+  --color-primitive-primary-color-pallette-primary-60: #66cca2;
+  --color-primitive-primary-color-pallette-primary-70: #8cd9ba;
+  --color-primitive-primary-color-pallette-primary-80: #b2e6d1;
+  --color-primitive-primary-color-pallette-primary-90: #d9f2e8;
+  --color-primitive-primary-color-pallette-primary-95: #ecf9f3;
+  --color-primitive-primary-color-pallette-primary-98: #fafdfb;
+  --color-primitive-primary-color-pallette-primary-99: #fbfefd;
+  --color-primitive-primary-color-pallette-primary-100: #ffffff;
+
+  /* Primitive Palette: secondary color pallete */
+  --color-primitive-secondary-color-pallete-secondary-90: #d9f0f2;
+  --color-primitive-secondary-color-pallete-secondary-50: #3fb4c0;
+  --color-primitive-secondary-color-pallete-secondary-40: #339099;
+  --color-primitive-secondary-color-pallete-secondary-80: #b2e1e6;
+  --color-primitive-secondary-color-pallete-secondary-60: #66c3cc;
+  --color-primitive-secondary-color-pallete-secondary-20: #19484d;
+  --color-primitive-secondary-color-pallete-secondary-100: #ffffff;
+  --color-primitive-secondary-color-pallete-secondary-0: #000000;
+  --color-primitive-secondary-color-pallete-secondary-10: #0d2426;
+  --color-primitive-secondary-color-pallete-secondary-70: #8cd2d9;
+  --color-primitive-secondary-color-pallete-secondary-98: #f7fcfc;
+  --color-primitive-secondary-color-pallete-secondary-95: #ecf8f9;
+  --color-primitive-secondary-color-pallete-secondary-99: #fbfdfe;
+  --color-primitive-secondary-color-pallete-secondary-30: #266c73;
+
+  /* Primitive Palette: tertiary color pallete */
+  --color-primitive-tertiary-color-pallete-tertiary-90: #d9f2db;
+  --color-primitive-tertiary-color-pallete-tertiary-70: #8cd993;
+  --color-primitive-tertiary-color-pallete-tertiary-60: #66cc6f;
+  --color-primitive-tertiary-color-pallete-tertiary-50: #3fc04b;
+  --color-primitive-tertiary-color-pallete-tertiary-20: #194d1e;
+  --color-primitive-tertiary-color-pallete-tertiary-30: #26732d;
+  --color-primitive-tertiary-color-pallete-tertiary-10: #0d260f;
+  --color-primitive-tertiary-color-pallete-tertiary-100: #ffffff;
+  --color-primitive-tertiary-color-pallete-tertiary-98: #f7fcf8;
+  --color-primitive-tertiary-color-pallete-tertiary-95: #ecf9ed;
+  --color-primitive-tertiary-color-pallete-tertiary-40: #33993c;
+  --color-primitive-tertiary-color-pallete-tertiary-99: #fbfefb;
+  --color-primitive-tertiary-color-pallete-tertiary-80: #b2e6b7;
+  --color-primitive-tertiary-color-pallete-tertiary-0: #000000;
+
+  /* Primitive Palette: neutral color pallete */
+  --color-primitive-neutral-color-pallete-neutral-90: #e6e6e6;
+  --color-primitive-neutral-color-pallete-neutral-70: #b3b3b3;
+  --color-primitive-neutral-color-pallete-neutral-20: #333333;
+  --color-primitive-neutral-color-pallete-neutral-60: #999999;
+  --color-primitive-neutral-color-pallete-neutral-80: #cccccc;
+  --color-primitive-neutral-color-pallete-neutral-50: #808080;
+  --color-primitive-neutral-color-pallete-neutral-40: #666666;
+  --color-primitive-neutral-color-pallete-neutral-100: #ffffff;
+  --color-primitive-neutral-color-pallete-neutral-99: #fcfcfc;
+  --color-primitive-neutral-color-pallete-neutral-10: #191919;
+  --color-primitive-neutral-color-pallete-neutral-30: #4c4c4c;
+  --color-primitive-neutral-color-pallete-neutral-0: #000000;
+  --color-primitive-neutral-color-pallete-neutral-95: #f2f2f2;
+  --color-primitive-neutral-color-pallete-neutral-98: #fafafa;
+  --color-primitive-neutral-color-pallete-neutral-92: #ebebeb;
+  --color-primitive-neutral-color-pallete-neutral-94: #f0f0f0;
+  --color-primitive-neutral-color-pallete-neutral-96: #f5f5f5;
+
+  /* Primitive Palette: neutral variant color pallette */
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-90: #e7e4e4;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-80: #cfc9c9;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-98: #fafafa;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-40: #6d5f5f;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-60: #a09292;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-50: #887777;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-30: #524747;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-100: #ffffff;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-20: #363030;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-70: #b8adad;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-0: #000000;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-99: #fdfcfc;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-95: #f3f1f1;
+  --color-primitive-neutral-variant-color-pallette-neutral-variant-10: #1b1818;
+
+  /* Primitive Palette: error color pallette */
+  --color-primitive-error-color-pallette-error-80: #fc9c9c;
+  --color-primitive-error-color-pallette-error-70: #fa6b6b;
+  --color-primitive-error-color-pallette-error-20: #630303;
+  --color-primitive-error-color-pallette-error-95: #fee6e6;
+  --color-primitive-error-color-pallette-error-98: #fff5f5;
+  --color-primitive-error-color-pallette-error-40: #c50707;
+  --color-primitive-error-color-pallette-error-60: #f83a3a;
+  --color-primitive-error-color-pallette-error-50: #f40808;
+  --color-primitive-error-color-pallette-error-30: #940505;
+  --color-primitive-error-color-pallette-error-10: #310202;
+  --color-primitive-error-color-pallette-error-100: #ffffff;
+  --color-primitive-error-color-pallette-error-99: #fffafa;
+  --color-primitive-error-color-pallette-error-90: #fdcece;
+  --color-primitive-error-color-pallette-error-0: #000000;
+
+  /* ==========================================================================
+     2. SEMANTIC COLOR ROLES (APPLY DIRECTLY TO UI)
+     --------------------------------------------------------------------------
+     These tokens represent semantic UI colors for buttons, surfaces, text, etc.
+     HIGHLIGHTED ROLES:
+     "primary color2" and "secondary color2" are designated as primary UI colors.
+     ========================================================================== */
+
+  /* --- Primary Brand Roles (Role Set 2: Direct UI Application) --- */
+  --color-ui-primary-color2: #529cf3;
+  --color-primary-2: var(--color-ui-primary-color2);
+  --color-ui-primary: var(--color-ui-primary-color2);
+  --color-ui-primary-container-2: #bfcbd9;
+  --color-primary-container-2: var(--color-ui-primary-container-2);
+  --color-ui-primary-container: var(--color-ui-primary-container-2);
+  --color-ui-on-primary-container-2: #2a4769;
+  --color-on-primary-container-2: var(--color-ui-on-primary-container-2);
+  --color-ui-on-primary-container: var(--color-ui-on-primary-container-2);
+  --color-ui-secondary-color2: #1579ef;
+  --color-secondary-2: var(--color-ui-secondary-color2);
+  --color-ui-secondary: var(--color-ui-secondary-color2);
+  --color-ui-secondary-container-2: #cfe4fc;
+  --color-secondary-container-2: var(--color-ui-secondary-container-2);
+  --color-ui-secondary-container: var(--color-ui-secondary-container-2);
+  --color-ui-on-secondary-container-2: #083b77;
+  --color-on-secondary-container-2: var(--color-ui-on-secondary-container-2);
+  --color-ui-on-secondary-container: var(--color-ui-on-secondary-container-2);
+  --color-ui-tertiary-color2: #8fbff7;
+  --color-tertiary-2: var(--color-ui-tertiary-color2);
+  --color-ui-tertiary: var(--color-ui-tertiary-color2);
+  --color-ui-tertiary-container-2: #b8d6fa;
+  --color-tertiary-container-2: var(--color-ui-tertiary-container-2);
+  --color-ui-tertiary-container: var(--color-ui-tertiary-container-2);
+  --color-ui-on-tertiary-container-2: #0a4385;
+  --color-on-tertiary-container-2: var(--color-ui-on-tertiary-container-2);
+  --color-ui-on-tertiary-container: var(--color-ui-on-tertiary-container-2);
+  --color-ui-color: #529cf3;
+  --color-accent: var(--color-ui-color);
+  --color-ui-accent: var(--color-ui-color);
+
+  /* --- Semantic Material Roles (Linked to Foundations with Fallbacks) --- */
+
+  /* Semantic Role Group: PRIMARY */
+  --color-role-primary-primary: var(--color-primitive-key-colors-group-primary-key-color, #36a477);
+  --color-role-primary: var(--color-role-primary-primary);
+  --color-role-primary-on-primary: var(--color-primitive-primary-color-pallette-primary-100, #ffffff);
+  --color-role-primary-primary-container: var(--color-primitive-primary-color-pallette-primary-90, #d9f2e8);
+  --color-role-primary-on-primary-container: var(--color-primitive-primary-color-pallette-primary-30, #267354);
+
+  /* Semantic Role Group: SECONDARY */
+  --color-role-secondary-secondary-container: var(--color-primitive-secondary-color-pallete-secondary-90, #d9f0f2);
+  --color-role-secondary-on-secondary: var(--color-primitive-secondary-color-pallete-secondary-100, #ffffff);
+  --color-role-secondary-on-secondary-container: var(--color-primitive-secondary-color-pallete-secondary-30, #266c73);
+  --color-role-secondary-secondary: var(--color-primitive-secondary-color-pallete-secondary-40, #339099);
+  --color-role-secondary: var(--color-role-secondary-secondary);
+
+  /* Semantic Role Group: TERTIARY */
+  --color-role-tertiary-tertiary: var(--color-primitive-tertiary-color-pallete-tertiary-40, #33993c);
+  --color-role-tertiary: var(--color-role-tertiary-tertiary);
+  --color-role-tertiary-on-tertiary: var(--color-primitive-tertiary-color-pallete-tertiary-100, #ffffff);
+  --color-role-tertiary-tertiary-container: var(--color-primitive-tertiary-color-pallete-tertiary-90, #d9f2db);
+  --color-role-tertiary-on-tertiary-container: var(--color-primitive-tertiary-color-pallete-tertiary-30, #26732d);
+
+  /* Semantic Role Group: SURFACE */
+  --color-role-surface-surface: var(--color-primitive-neutral-color-pallete-neutral-98, #fafafa);
+  --color-role-surface: var(--color-role-surface-surface);
+  --color-role-surface-on-surface: var(--color-primitive-neutral-color-pallete-neutral-10, #191919);
+  --color-role-surface-surface-variant: var(--color-primitive-neutral-variant-color-pallette-neutral-variant-90, #e7e4e4);
+  --color-role-surface-on-surface-variant: var(--color-primitive-neutral-variant-color-pallette-neutral-variant-30, #524747);
+  --color-role-surface-surface-container-highest: var(--color-primitive-neutral-color-pallete-neutral-90, #e6e6e6);
+  --color-role-surface-surface-container-high: var(--color-primitive-neutral-color-pallete-neutral-92, #ebebeb);
+  --color-role-surface-surface-container: var(--color-primitive-neutral-color-pallete-neutral-94, #f0f0f0);
+  --color-role-surface-surface-container-low: var(--color-primitive-neutral-color-pallete-neutral-96, #f5f5f5);
+  --color-role-surface-surface-container-lowest: var(--color-primitive-neutral-color-pallete-neutral-100, #ffffff);
+  --color-role-surface-inverse-surface: var(--color-primitive-neutral-color-pallete-neutral-20, #333333);
+  --color-role-surface-inverse-on-surface: var(--color-primitive-neutral-color-pallete-neutral-95, #f2f2f2);
+  --color-role-surface-surface-tint: var(--color-primitive-primary-color-pallette-primary-40, #33996f);
+
+  /* Semantic Role Group: ERROR */
+  --color-role-error-error: var(--color-primitive-error-color-pallette-error-40, #c50707);
+  --color-role-error: var(--color-role-error-error);
+  --color-role-error-on-error: var(--color-primitive-error-color-pallette-error-100, #ffffff);
+  --color-role-error-error-container: var(--color-primitive-error-color-pallette-error-90, #fdcece);
+  --color-role-error-on-error-container: var(--color-primitive-error-color-pallette-error-30, #940505);
+
+  /* Semantic Role Group: OUTLINE */
+  --color-role-outline-outline: var(--color-primitive-neutral-variant-color-pallette-neutral-variant-50, #887777);
+  --color-role-outline: var(--color-role-outline-outline);
+  --color-role-outline-outline-variant: var(--color-primitive-neutral-variant-color-pallette-neutral-variant-80, #cfc9c9);
+
+  /* ==========================================================================
+     3. SPACING SCALE
+     --------------------------------------------------------------------------
+     System spacing values converted to CSS custom properties.
+     ========================================================================== */
+
+  --spacing-no-spacing: 0px; /* 0 */
+  --spacing-none: var(--spacing-no-spacing);
+  --spacing-extra-small-spacing: 4px; /* 0.25rem */
+  --spacing-xs: var(--spacing-extra-small-spacing);
+  --spacing-small-spacing: 8px; /* 0.5rem */
+  --spacing-sm: var(--spacing-small-spacing);
+  --spacing-medium-spacing: 12px; /* 0.75rem */
+  --spacing-md: var(--spacing-medium-spacing);
+  --spacing-base-spacing: 16px; /* 1rem */
+  --spacing-base: var(--spacing-base-spacing);
+  --spacing-large-spacing: 20px; /* 1.25rem */
+  --spacing-lg: var(--spacing-large-spacing);
+  --spacing-extra-large-spacing: 24px; /* 1.5rem */
+  --spacing-xl: var(--spacing-extra-large-spacing);
+  --spacing-very-large-sacing: 32px; /* 2rem */
+  --spacing-2xl: var(--spacing-very-large-sacing);
+
+  /* ==========================================================================
+     4. ELEVATION & SHADOW EFFECTS
+     --------------------------------------------------------------------------
+     Elevation levels formatted as standard CSS box-shadow declarations.
+     ========================================================================== */
+
+  --shadow-hard-shadow: 4px 6px 8px 0px rgba(0, 0, 0, 0.322);
+  --shadow-medium-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.278);
+  --shadow-soft-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.122);
+
+  /* ==========================================================================
+     5. TYPOGRAPHY SYSTEM
+     --------------------------------------------------------------------------
+     Type scales including font-family, sizes, weights, and line heights.
+     ========================================================================== */
+
+  /* Typography: display large */
+  --typography-display-large-font-size: 57px;
+  --typography-display-large-text-decoration: none;
+  --typography-display-large-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-display-large-font-weight: 500;
+  --typography-display-large-font-style: normal;
+  --typography-display-large-font-stretch: normal;
+  --typography-display-large-letter-spacing: -2.28px;
+  --typography-display-large-line-height: 87px;
+  --typography-display-large-paragraph-indent: 0px;
+  --typography-display-large-paragraph-spacing: 0px;
+  --typography-display-large-text-case: none;
+
+  /* Typography: display medium */
+  --typography-display-medium-font-size: 45px;
+  --typography-display-medium-text-decoration: none;
+  --typography-display-medium-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-display-medium-font-weight: 500;
+  --typography-display-medium-font-style: normal;
+  --typography-display-medium-font-stretch: normal;
+  --typography-display-medium-letter-spacing: -1.35px;
+  --typography-display-medium-line-height: 67.5px;
+  --typography-display-medium-paragraph-indent: 0px;
+  --typography-display-medium-paragraph-spacing: 0px;
+  --typography-display-medium-text-case: none;
+
+  /* Typography: display small */
+  --typography-display-small-font-size: 36px;
+  --typography-display-small-text-decoration: none;
+  --typography-display-small-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-display-small-font-weight: 400;
+  --typography-display-small-font-style: normal;
+  --typography-display-small-font-stretch: normal;
+  --typography-display-small-letter-spacing: -0.72px;
+  --typography-display-small-line-height: 43.2px;
+  --typography-display-small-paragraph-indent: 0px;
+  --typography-display-small-paragraph-spacing: 0px;
+  --typography-display-small-text-case: none;
+
+  /* Typography: headline large */
+  --typography-headline-large-font-size: 32px;
+  --typography-headline-large-text-decoration: none;
+  --typography-headline-large-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-headline-large-font-weight: 600;
+  --typography-headline-large-font-style: normal;
+  --typography-headline-large-font-stretch: normal;
+  --typography-headline-large-letter-spacing: -0.32px;
+  --typography-headline-large-line-height: 48px;
+  --typography-headline-large-paragraph-indent: 0px;
+  --typography-headline-large-paragraph-spacing: 0px;
+  --typography-headline-large-text-case: none;
+
+  /* Typography: headline medium */
+  --typography-headline-medium-font-size: 28px;
+  --typography-headline-medium-text-decoration: none;
+  --typography-headline-medium-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-headline-medium-font-weight: 400;
+  --typography-headline-medium-font-style: normal;
+  --typography-headline-medium-font-stretch: normal;
+  --typography-headline-medium-letter-spacing: -0.28px;
+  --typography-headline-medium-line-height: 42px;
+  --typography-headline-medium-paragraph-indent: 0px;
+  --typography-headline-medium-paragraph-spacing: 0px;
+  --typography-headline-medium-text-case: none;
+
+  /* Typography: headline small */
+  --typography-headline-small-font-size: 24px;
+  --typography-headline-small-text-decoration: none;
+  --typography-headline-small-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-headline-small-font-weight: 400;
+  --typography-headline-small-font-style: normal;
+  --typography-headline-small-font-stretch: normal;
+  --typography-headline-small-letter-spacing: -0.24px;
+  --typography-headline-small-line-height: 36px;
+  --typography-headline-small-paragraph-indent: 0px;
+  --typography-headline-small-paragraph-spacing: 0px;
+  --typography-headline-small-text-case: none;
+
+  /* Typography: title large */
+  --typography-title-large-font-size: 22px;
+  --typography-title-large-text-decoration: none;
+  --typography-title-large-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-title-large-font-weight: 500;
+  --typography-title-large-font-style: normal;
+  --typography-title-large-font-stretch: normal;
+  --typography-title-large-letter-spacing: 0px;
+  --typography-title-large-line-height: 33px;
+  --typography-title-large-paragraph-indent: 0px;
+  --typography-title-large-paragraph-spacing: 0px;
+  --typography-title-large-text-case: none;
+
+  /* Typography: title medium */
+  --typography-title-medium-font-size: 16px;
+  --typography-title-medium-text-decoration: none;
+  --typography-title-medium-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-title-medium-font-weight: 400;
+  --typography-title-medium-font-style: normal;
+  --typography-title-medium-font-stretch: normal;
+  --typography-title-medium-letter-spacing: 0px;
+  --typography-title-medium-line-height: 24px;
+  --typography-title-medium-paragraph-indent: 0px;
+  --typography-title-medium-paragraph-spacing: 0px;
+  --typography-title-medium-text-case: none;
+
+  /* Typography: title small */
+  --typography-title-small-font-size: 14px;
+  --typography-title-small-text-decoration: none;
+  --typography-title-small-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-title-small-font-weight: 400;
+  --typography-title-small-font-style: normal;
+  --typography-title-small-font-stretch: normal;
+  --typography-title-small-letter-spacing: 0px;
+  --typography-title-small-line-height: 21px;
+  --typography-title-small-paragraph-indent: 0px;
+  --typography-title-small-paragraph-spacing: 0px;
+  --typography-title-small-text-case: none;
+
+  /* Typography: body large */
+  --typography-body-large-font-size: 16px;
+  --typography-body-large-text-decoration: none;
+  --typography-body-large-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-body-large-font-weight: 500;
+  --typography-body-large-font-style: normal;
+  --typography-body-large-font-stretch: normal;
+  --typography-body-large-letter-spacing: 0px;
+  --typography-body-large-line-height: 24px;
+  --typography-body-large-paragraph-indent: 0px;
+  --typography-body-large-paragraph-spacing: 0px;
+  --typography-body-large-text-case: none;
+
+  /* Typography: body medium */
+  --typography-body-medium-font-size: 14px;
+  --typography-body-medium-text-decoration: none;
+  --typography-body-medium-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-body-medium-font-weight: 500;
+  --typography-body-medium-font-style: normal;
+  --typography-body-medium-font-stretch: normal;
+  --typography-body-medium-letter-spacing: 0px;
+  --typography-body-medium-line-height: 21px;
+  --typography-body-medium-paragraph-indent: 0px;
+  --typography-body-medium-paragraph-spacing: 0px;
+  --typography-body-medium-text-case: none;
+
+  /* Typography: body small */
+  --typography-body-small-font-size: 12px;
+  --typography-body-small-text-decoration: none;
+  --typography-body-small-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-body-small-font-weight: 500;
+  --typography-body-small-font-style: normal;
+  --typography-body-small-font-stretch: normal;
+  --typography-body-small-letter-spacing: 0px;
+  --typography-body-small-line-height: 18px;
+  --typography-body-small-paragraph-indent: 0px;
+  --typography-body-small-paragraph-spacing: 0px;
+  --typography-body-small-text-case: none;
+
+  /* Typography: label large */
+  --typography-label-large-font-size: 14px;
+  --typography-label-large-text-decoration: none;
+  --typography-label-large-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-label-large-font-weight: 500;
+  --typography-label-large-font-style: normal;
+  --typography-label-large-font-stretch: normal;
+  --typography-label-large-letter-spacing: 0px;
+  --typography-label-large-line-height: 21px;
+  --typography-label-large-paragraph-indent: 0px;
+  --typography-label-large-paragraph-spacing: 0px;
+  --typography-label-large-text-case: none;
+
+  /* Typography: label medium */
+  --typography-label-medium-font-size: 12px;
+  --typography-label-medium-text-decoration: none;
+  --typography-label-medium-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-label-medium-font-weight: 500;
+  --typography-label-medium-font-style: normal;
+  --typography-label-medium-font-stretch: normal;
+  --typography-label-medium-letter-spacing: 0px;
+  --typography-label-medium-line-height: 18px;
+  --typography-label-medium-paragraph-indent: 0px;
+  --typography-label-medium-paragraph-spacing: 0px;
+  --typography-label-medium-text-case: none;
+
+  /* Typography: label small */
+  --typography-label-small-font-size: 11px;
+  --typography-label-small-text-decoration: none;
+  --typography-label-small-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-label-small-font-weight: 500;
+  --typography-label-small-font-style: normal;
+  --typography-label-small-font-stretch: normal;
+  --typography-label-small-letter-spacing: 0px;
+  --typography-label-small-line-height: 16.5px;
+  --typography-label-small-paragraph-indent: 0px;
+  --typography-label-small-paragraph-spacing: 0px;
+  --typography-label-small-text-case: none;
+
+  /* Typography: button */
+  --typography-button-font-size: 16px;
+  --typography-button-text-decoration: none;
+  --typography-button-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-button-font-weight: 600;
+  --typography-button-font-style: normal;
+  --typography-button-font-stretch: normal;
+  --typography-button-letter-spacing: 0px;
+  --typography-button-line-height: 24px;
+  --typography-button-paragraph-indent: 0px;
+  --typography-button-paragraph-spacing: 0px;
+  --typography-button-text-case: none;
+
+  /* Typography: text */
+  --typography-text-font-size: 57px;
+  --typography-text-text-decoration: none;
+  --typography-text-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-text-font-weight: 500;
+  --typography-text-font-style: normal;
+  --typography-text-font-stretch: normal;
+  --typography-text-letter-spacing: -2.28px;
+  --typography-text-line-height: 87px;
+  --typography-text-paragraph-indent: 0px;
+  --typography-text-paragraph-spacing: 0px;
+  --typography-text-text-case: none;
+
+  /* Typography: display large 2 */
+  --typography-display-large-2-font-size: 57px;
+  --typography-display-large-2-text-decoration: none;
+  --typography-display-large-2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-display-large-2-font-weight: 500;
+  --typography-display-large-2-font-style: normal;
+  --typography-display-large-2-font-stretch: normal;
+  --typography-display-large-2-letter-spacing: -2.28px;
+  --typography-display-large-2-line-height: 87px;
+  --typography-display-large-2-paragraph-indent: 0px;
+  --typography-display-large-2-paragraph-spacing: 0px;
+  --typography-display-large-2-text-case: none;
+
+  /* Typography: display medium2 */
+  --typography-display-medium2-font-size: 45px;
+  --typography-display-medium2-text-decoration: none;
+  --typography-display-medium2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-display-medium2-font-weight: 500;
+  --typography-display-medium2-font-style: normal;
+  --typography-display-medium2-font-stretch: normal;
+  --typography-display-medium2-letter-spacing: -1.35px;
+  --typography-display-medium2-line-height: 67.5px;
+  --typography-display-medium2-paragraph-indent: 0px;
+  --typography-display-medium2-paragraph-spacing: 0px;
+  --typography-display-medium2-text-case: none;
+
+  /* Typography: display small2 */
+  --typography-display-small2-font-size: 36px;
+  --typography-display-small2-text-decoration: none;
+  --typography-display-small2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-display-small2-font-weight: 400;
+  --typography-display-small2-font-style: normal;
+  --typography-display-small2-font-stretch: normal;
+  --typography-display-small2-letter-spacing: -0.72px;
+  --typography-display-small2-line-height: 43.2px;
+  --typography-display-small2-paragraph-indent: 0px;
+  --typography-display-small2-paragraph-spacing: 0px;
+  --typography-display-small2-text-case: none;
+
+  /* Typography: headline large2 */
+  --typography-headline-large2-font-size: 32px;
+  --typography-headline-large2-text-decoration: none;
+  --typography-headline-large2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-headline-large2-font-weight: 600;
+  --typography-headline-large2-font-style: normal;
+  --typography-headline-large2-font-stretch: normal;
+  --typography-headline-large2-letter-spacing: -0.32px;
+  --typography-headline-large2-line-height: 48px;
+  --typography-headline-large2-paragraph-indent: 0px;
+  --typography-headline-large2-paragraph-spacing: 0px;
+  --typography-headline-large2-text-case: none;
+
+  /* Typography: headline medium2 */
+  --typography-headline-medium2-font-size: 28px;
+  --typography-headline-medium2-text-decoration: none;
+  --typography-headline-medium2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-headline-medium2-font-weight: 400;
+  --typography-headline-medium2-font-style: normal;
+  --typography-headline-medium2-font-stretch: normal;
+  --typography-headline-medium2-letter-spacing: -0.28px;
+  --typography-headline-medium2-line-height: 42px;
+  --typography-headline-medium2-paragraph-indent: 0px;
+  --typography-headline-medium2-paragraph-spacing: 0px;
+  --typography-headline-medium2-text-case: none;
+
+  /* Typography: headline small2 */
+  --typography-headline-small2-font-size: 24px;
+  --typography-headline-small2-text-decoration: none;
+  --typography-headline-small2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-headline-small2-font-weight: 400;
+  --typography-headline-small2-font-style: normal;
+  --typography-headline-small2-font-stretch: normal;
+  --typography-headline-small2-letter-spacing: -0.24px;
+  --typography-headline-small2-line-height: 36px;
+  --typography-headline-small2-paragraph-indent: 0px;
+  --typography-headline-small2-paragraph-spacing: 0px;
+  --typography-headline-small2-text-case: none;
+
+  /* Typography: title large2 */
+  --typography-title-large2-font-size: 22px;
+  --typography-title-large2-text-decoration: none;
+  --typography-title-large2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-title-large2-font-weight: 500;
+  --typography-title-large2-font-style: normal;
+  --typography-title-large2-font-stretch: normal;
+  --typography-title-large2-letter-spacing: 0px;
+  --typography-title-large2-line-height: 33px;
+  --typography-title-large2-paragraph-indent: 0px;
+  --typography-title-large2-paragraph-spacing: 0px;
+  --typography-title-large2-text-case: none;
+
+  /* Typography: title medium2 */
+  --typography-title-medium2-font-size: 16px;
+  --typography-title-medium2-text-decoration: none;
+  --typography-title-medium2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-title-medium2-font-weight: 400;
+  --typography-title-medium2-font-style: normal;
+  --typography-title-medium2-font-stretch: normal;
+  --typography-title-medium2-letter-spacing: 0px;
+  --typography-title-medium2-line-height: 24px;
+  --typography-title-medium2-paragraph-indent: 0px;
+  --typography-title-medium2-paragraph-spacing: 0px;
+  --typography-title-medium2-text-case: none;
+
+  /* Typography: title small2 */
+  --typography-title-small2-font-size: 14px;
+  --typography-title-small2-text-decoration: none;
+  --typography-title-small2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-title-small2-font-weight: 400;
+  --typography-title-small2-font-style: normal;
+  --typography-title-small2-font-stretch: normal;
+  --typography-title-small2-letter-spacing: 0px;
+  --typography-title-small2-line-height: 21px;
+  --typography-title-small2-paragraph-indent: 0px;
+  --typography-title-small2-paragraph-spacing: 0px;
+  --typography-title-small2-text-case: none;
+
+  /* Typography: body large2 */
+  --typography-body-large2-font-size: 16px;
+  --typography-body-large2-text-decoration: none;
+  --typography-body-large2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-body-large2-font-weight: 500;
+  --typography-body-large2-font-style: normal;
+  --typography-body-large2-font-stretch: normal;
+  --typography-body-large2-letter-spacing: 0px;
+  --typography-body-large2-line-height: 24px;
+  --typography-body-large2-paragraph-indent: 0px;
+  --typography-body-large2-paragraph-spacing: 0px;
+  --typography-body-large2-text-case: none;
+
+  /* Typography: body medium2 */
+  --typography-body-medium2-font-size: 14px;
+  --typography-body-medium2-text-decoration: none;
+  --typography-body-medium2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-body-medium2-font-weight: 500;
+  --typography-body-medium2-font-style: normal;
+  --typography-body-medium2-font-stretch: normal;
+  --typography-body-medium2-letter-spacing: 0px;
+  --typography-body-medium2-line-height: 21px;
+  --typography-body-medium2-paragraph-indent: 0px;
+  --typography-body-medium2-paragraph-spacing: 0px;
+  --typography-body-medium2-text-case: none;
+
+  /* Typography: body small2 */
+  --typography-body-small2-font-size: 12px;
+  --typography-body-small2-text-decoration: none;
+  --typography-body-small2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-body-small2-font-weight: 500;
+  --typography-body-small2-font-style: normal;
+  --typography-body-small2-font-stretch: normal;
+  --typography-body-small2-letter-spacing: 0px;
+  --typography-body-small2-line-height: 18px;
+  --typography-body-small2-paragraph-indent: 0px;
+  --typography-body-small2-paragraph-spacing: 0px;
+  --typography-body-small2-text-case: none;
+
+  /* Typography: label large2 */
+  --typography-label-large2-font-size: 14px;
+  --typography-label-large2-text-decoration: none;
+  --typography-label-large2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-label-large2-font-weight: 500;
+  --typography-label-large2-font-style: normal;
+  --typography-label-large2-font-stretch: normal;
+  --typography-label-large2-letter-spacing: 0px;
+  --typography-label-large2-line-height: 21px;
+  --typography-label-large2-paragraph-indent: 0px;
+  --typography-label-large2-paragraph-spacing: 0px;
+  --typography-label-large2-text-case: none;
+
+  /* Typography: label medium2 */
+  --typography-label-medium2-font-size: 12px;
+  --typography-label-medium2-text-decoration: none;
+  --typography-label-medium2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-label-medium2-font-weight: 500;
+  --typography-label-medium2-font-style: normal;
+  --typography-label-medium2-font-stretch: normal;
+  --typography-label-medium2-letter-spacing: 0px;
+  --typography-label-medium2-line-height: 18px;
+  --typography-label-medium2-paragraph-indent: 0px;
+  --typography-label-medium2-paragraph-spacing: 0px;
+  --typography-label-medium2-text-case: none;
+
+  /* Typography: label small2 */
+  --typography-label-small2-font-size: 11px;
+  --typography-label-small2-text-decoration: none;
+  --typography-label-small2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-label-small2-font-weight: 500;
+  --typography-label-small2-font-style: normal;
+  --typography-label-small2-font-stretch: normal;
+  --typography-label-small2-letter-spacing: 0px;
+  --typography-label-small2-line-height: 16.5px;
+  --typography-label-small2-paragraph-indent: 0px;
+  --typography-label-small2-paragraph-spacing: 0px;
+  --typography-label-small2-text-case: none;
+
+  /* Typography: button2 */
+  --typography-button2-font-size: 16px;
+  --typography-button2-text-decoration: none;
+  --typography-button2-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --typography-button2-font-weight: 600;
+  --typography-button2-font-style: normal;
+  --typography-button2-font-stretch: normal;
+  --typography-button2-letter-spacing: 0px;
+  --typography-button2-line-height: 24px;
+  --typography-button2-paragraph-indent: 0px;
+  --typography-button2-paragraph-spacing: 0px;
+  --typography-button2-text-case: none;
+
+}
+
+/* ==========================================================================
+   TYPOGRAPHY UTILITY CLASSES
+   ========================================================================== */
+
+.type-display-large {
+  font-family: var(--typography-display-large-font-family);
+  font-size: var(--typography-display-large-font-size);
+  font-weight: var(--typography-display-large-font-weight);
+  line-height: var(--typography-display-large-line-height);
+  letter-spacing: var(--typography-display-large-letter-spacing);
+  text-decoration: var(--typography-display-large-text-decoration);
+}
+
+.type-display-medium {
+  font-family: var(--typography-display-medium-font-family);
+  font-size: var(--typography-display-medium-font-size);
+  font-weight: var(--typography-display-medium-font-weight);
+  line-height: var(--typography-display-medium-line-height);
+  letter-spacing: var(--typography-display-medium-letter-spacing);
+  text-decoration: var(--typography-display-medium-text-decoration);
+}
+
+.type-display-small {
+  font-family: var(--typography-display-small-font-family);
+  font-size: var(--typography-display-small-font-size);
+  font-weight: var(--typography-display-small-font-weight);
+  line-height: var(--typography-display-small-line-height);
+  letter-spacing: var(--typography-display-small-letter-spacing);
+  text-decoration: var(--typography-display-small-text-decoration);
+}
+
+.type-headline-large {
+  font-family: var(--typography-headline-large-font-family);
+  font-size: var(--typography-headline-large-font-size);
+  font-weight: var(--typography-headline-large-font-weight);
+  line-height: var(--typography-headline-large-line-height);
+  letter-spacing: var(--typography-headline-large-letter-spacing);
+  text-decoration: var(--typography-headline-large-text-decoration);
+}
+
+.type-headline-medium {
+  font-family: var(--typography-headline-medium-font-family);
+  font-size: var(--typography-headline-medium-font-size);
+  font-weight: var(--typography-headline-medium-font-weight);
+  line-height: var(--typography-headline-medium-line-height);
+  letter-spacing: var(--typography-headline-medium-letter-spacing);
+  text-decoration: var(--typography-headline-medium-text-decoration);
+}
+
+.type-headline-small {
+  font-family: var(--typography-headline-small-font-family);
+  font-size: var(--typography-headline-small-font-size);
+  font-weight: var(--typography-headline-small-font-weight);
+  line-height: var(--typography-headline-small-line-height);
+  letter-spacing: var(--typography-headline-small-letter-spacing);
+  text-decoration: var(--typography-headline-small-text-decoration);
+}
+
+.type-title-large {
+  font-family: var(--typography-title-large-font-family);
+  font-size: var(--typography-title-large-font-size);
+  font-weight: var(--typography-title-large-font-weight);
+  line-height: var(--typography-title-large-line-height);
+  letter-spacing: var(--typography-title-large-letter-spacing);
+  text-decoration: var(--typography-title-large-text-decoration);
+}
+
+.type-title-medium {
+  font-family: var(--typography-title-medium-font-family);
+  font-size: var(--typography-title-medium-font-size);
+  font-weight: var(--typography-title-medium-font-weight);
+  line-height: var(--typography-title-medium-line-height);
+  letter-spacing: var(--typography-title-medium-letter-spacing);
+  text-decoration: var(--typography-title-medium-text-decoration);
+}
+
+.type-title-small {
+  font-family: var(--typography-title-small-font-family);
+  font-size: var(--typography-title-small-font-size);
+  font-weight: var(--typography-title-small-font-weight);
+  line-height: var(--typography-title-small-line-height);
+  letter-spacing: var(--typography-title-small-letter-spacing);
+  text-decoration: var(--typography-title-small-text-decoration);
+}
+
+.type-body-large {
+  font-family: var(--typography-body-large-font-family);
+  font-size: var(--typography-body-large-font-size);
+  font-weight: var(--typography-body-large-font-weight);
+  line-height: var(--typography-body-large-line-height);
+  letter-spacing: var(--typography-body-large-letter-spacing);
+  text-decoration: var(--typography-body-large-text-decoration);
+}
+
+.type-body-medium {
+  font-family: var(--typography-body-medium-font-family);
+  font-size: var(--typography-body-medium-font-size);
+  font-weight: var(--typography-body-medium-font-weight);
+  line-height: var(--typography-body-medium-line-height);
+  letter-spacing: var(--typography-body-medium-letter-spacing);
+  text-decoration: var(--typography-body-medium-text-decoration);
+}
+
+.type-body-small {
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  line-height: var(--typography-body-small-line-height);
+  letter-spacing: var(--typography-body-small-letter-spacing);
+  text-decoration: var(--typography-body-small-text-decoration);
+}
+
+.type-label-large {
+  font-family: var(--typography-label-large-font-family);
+  font-size: var(--typography-label-large-font-size);
+  font-weight: var(--typography-label-large-font-weight);
+  line-height: var(--typography-label-large-line-height);
+  letter-spacing: var(--typography-label-large-letter-spacing);
+  text-decoration: var(--typography-label-large-text-decoration);
+}
+
+.type-label-medium {
+  font-family: var(--typography-label-medium-font-family);
+  font-size: var(--typography-label-medium-font-size);
+  font-weight: var(--typography-label-medium-font-weight);
+  line-height: var(--typography-label-medium-line-height);
+  letter-spacing: var(--typography-label-medium-letter-spacing);
+  text-decoration: var(--typography-label-medium-text-decoration);
+}
+
+.type-label-small {
+  font-family: var(--typography-label-small-font-family);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-label-small-font-weight);
+  line-height: var(--typography-label-small-line-height);
+  letter-spacing: var(--typography-label-small-letter-spacing);
+  text-decoration: var(--typography-label-small-text-decoration);
+}
+
+.type-button {
+  font-family: var(--typography-button-font-family);
+  font-size: var(--typography-button-font-size);
+  font-weight: var(--typography-button-font-weight);
+  line-height: var(--typography-button-line-height);
+  letter-spacing: var(--typography-button-letter-spacing);
+  text-decoration: var(--typography-button-text-decoration);
+}
+
+.type-text {
+  font-family: var(--typography-text-font-family);
+  font-size: var(--typography-text-font-size);
+  font-weight: var(--typography-text-font-weight);
+  line-height: var(--typography-text-line-height);
+  letter-spacing: var(--typography-text-letter-spacing);
+  text-decoration: var(--typography-text-text-decoration);
+}
+
+.type-display-large-2 {
+  font-family: var(--typography-display-large-2-font-family);
+  font-size: var(--typography-display-large-2-font-size);
+  font-weight: var(--typography-display-large-2-font-weight);
+  line-height: var(--typography-display-large-2-line-height);
+  letter-spacing: var(--typography-display-large-2-letter-spacing);
+  text-decoration: var(--typography-display-large-2-text-decoration);
+}
+
+.type-display-medium2 {
+  font-family: var(--typography-display-medium2-font-family);
+  font-size: var(--typography-display-medium2-font-size);
+  font-weight: var(--typography-display-medium2-font-weight);
+  line-height: var(--typography-display-medium2-line-height);
+  letter-spacing: var(--typography-display-medium2-letter-spacing);
+  text-decoration: var(--typography-display-medium2-text-decoration);
+}
+
+.type-display-small2 {
+  font-family: var(--typography-display-small2-font-family);
+  font-size: var(--typography-display-small2-font-size);
+  font-weight: var(--typography-display-small2-font-weight);
+  line-height: var(--typography-display-small2-line-height);
+  letter-spacing: var(--typography-display-small2-letter-spacing);
+  text-decoration: var(--typography-display-small2-text-decoration);
+}
+
+.type-headline-large2 {
+  font-family: var(--typography-headline-large2-font-family);
+  font-size: var(--typography-headline-large2-font-size);
+  font-weight: var(--typography-headline-large2-font-weight);
+  line-height: var(--typography-headline-large2-line-height);
+  letter-spacing: var(--typography-headline-large2-letter-spacing);
+  text-decoration: var(--typography-headline-large2-text-decoration);
+}
+
+.type-headline-medium2 {
+  font-family: var(--typography-headline-medium2-font-family);
+  font-size: var(--typography-headline-medium2-font-size);
+  font-weight: var(--typography-headline-medium2-font-weight);
+  line-height: var(--typography-headline-medium2-line-height);
+  letter-spacing: var(--typography-headline-medium2-letter-spacing);
+  text-decoration: var(--typography-headline-medium2-text-decoration);
+}
+
+.type-headline-small2 {
+  font-family: var(--typography-headline-small2-font-family);
+  font-size: var(--typography-headline-small2-font-size);
+  font-weight: var(--typography-headline-small2-font-weight);
+  line-height: var(--typography-headline-small2-line-height);
+  letter-spacing: var(--typography-headline-small2-letter-spacing);
+  text-decoration: var(--typography-headline-small2-text-decoration);
+}
+
+.type-title-large2 {
+  font-family: var(--typography-title-large2-font-family);
+  font-size: var(--typography-title-large2-font-size);
+  font-weight: var(--typography-title-large2-font-weight);
+  line-height: var(--typography-title-large2-line-height);
+  letter-spacing: var(--typography-title-large2-letter-spacing);
+  text-decoration: var(--typography-title-large2-text-decoration);
+}
+
+.type-title-medium2 {
+  font-family: var(--typography-title-medium2-font-family);
+  font-size: var(--typography-title-medium2-font-size);
+  font-weight: var(--typography-title-medium2-font-weight);
+  line-height: var(--typography-title-medium2-line-height);
+  letter-spacing: var(--typography-title-medium2-letter-spacing);
+  text-decoration: var(--typography-title-medium2-text-decoration);
+}
+
+.type-title-small2 {
+  font-family: var(--typography-title-small2-font-family);
+  font-size: var(--typography-title-small2-font-size);
+  font-weight: var(--typography-title-small2-font-weight);
+  line-height: var(--typography-title-small2-line-height);
+  letter-spacing: var(--typography-title-small2-letter-spacing);
+  text-decoration: var(--typography-title-small2-text-decoration);
+}
+
+.type-body-large2 {
+  font-family: var(--typography-body-large2-font-family);
+  font-size: var(--typography-body-large2-font-size);
+  font-weight: var(--typography-body-large2-font-weight);
+  line-height: var(--typography-body-large2-line-height);
+  letter-spacing: var(--typography-body-large2-letter-spacing);
+  text-decoration: var(--typography-body-large2-text-decoration);
+}
+
+.type-body-medium2 {
+  font-family: var(--typography-body-medium2-font-family);
+  font-size: var(--typography-body-medium2-font-size);
+  font-weight: var(--typography-body-medium2-font-weight);
+  line-height: var(--typography-body-medium2-line-height);
+  letter-spacing: var(--typography-body-medium2-letter-spacing);
+  text-decoration: var(--typography-body-medium2-text-decoration);
+}
+
+.type-body-small2 {
+  font-family: var(--typography-body-small2-font-family);
+  font-size: var(--typography-body-small2-font-size);
+  font-weight: var(--typography-body-small2-font-weight);
+  line-height: var(--typography-body-small2-line-height);
+  letter-spacing: var(--typography-body-small2-letter-spacing);
+  text-decoration: var(--typography-body-small2-text-decoration);
+}
+
+.type-label-large2 {
+  font-family: var(--typography-label-large2-font-family);
+  font-size: var(--typography-label-large2-font-size);
+  font-weight: var(--typography-label-large2-font-weight);
+  line-height: var(--typography-label-large2-line-height);
+  letter-spacing: var(--typography-label-large2-letter-spacing);
+  text-decoration: var(--typography-label-large2-text-decoration);
+}
+
+.type-label-medium2 {
+  font-family: var(--typography-label-medium2-font-family);
+  font-size: var(--typography-label-medium2-font-size);
+  font-weight: var(--typography-label-medium2-font-weight);
+  line-height: var(--typography-label-medium2-line-height);
+  letter-spacing: var(--typography-label-medium2-letter-spacing);
+  text-decoration: var(--typography-label-medium2-text-decoration);
+}
+
+.type-label-small2 {
+  font-family: var(--typography-label-small2-font-family);
+  font-size: var(--typography-label-small2-font-size);
+  font-weight: var(--typography-label-small2-font-weight);
+  line-height: var(--typography-label-small2-line-height);
+  letter-spacing: var(--typography-label-small2-letter-spacing);
+  text-decoration: var(--typography-label-small2-text-decoration);
+}
+
+.type-button2 {
+  font-family: var(--typography-button2-font-family);
+  font-size: var(--typography-button2-font-size);
+  font-weight: var(--typography-button2-font-weight);
+  line-height: var(--typography-button2-line-height);
+  letter-spacing: var(--typography-button2-letter-spacing);
+  text-decoration: var(--typography-button2-text-decoration);
+}
