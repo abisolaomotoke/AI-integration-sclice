@@ -34,49 +34,68 @@ export default function SignupPage() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6">
-      <h1 className="mb-6 text-xl font-semibold">Create account</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="text-sm font-medium">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="rounded-md border border-stone-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-stone-500"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <label htmlFor="password" className="text-sm font-medium">
-            Password
-          </label>
-          <input
-            id="password"
-            type="password"
-            required
-            minLength={8}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="rounded-md border border-stone-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-stone-500"
-          />
-          <span className="text-xs text-stone-500">At least 8 characters.</span>
-        </div>
-        {error && <p className="text-sm text-red-600">{error}</p>}
-        <button
-          type="submit"
-          disabled={loading}
-          className="rounded-md bg-stone-900 px-4 py-2 text-white disabled:opacity-50"
-        >
-          {loading ? "Creating account…" : "Create account"}
-        </button>
-      </form>
-      <p className="mt-4 text-sm text-stone-600">
+    <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-[var(--spacing-xl)]">
+      <div
+        className="rounded-lg bg-surface-container-lowest p-[var(--spacing-2xl)]"
+        style={{ boxShadow: "var(--shadow-soft-shadow)" }}
+      >
+        <h1 className="type-headline-medium2 mb-[var(--spacing-sm)] text-on-surface">
+          Create account
+        </h1>
+        <p className="type-body-medium2 mb-[var(--spacing-xl)] text-on-surface-variant">
+          Sign up to start extracting insights from your notes.
+        </p>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-[var(--spacing-base)]">
+          <div className="flex flex-col gap-[var(--spacing-xs)]">
+            <label htmlFor="signup-email" className="type-label-large2 text-on-surface">
+              Email
+            </label>
+            <input
+              id="signup-email"
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="rounded-md border border-outline-variant bg-surface-container-lowest px-[var(--spacing-md)] py-[var(--spacing-sm)] text-on-surface outline-none transition-shadow focus:ring-2 focus:ring-primary"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div className="flex flex-col gap-[var(--spacing-xs)]">
+            <label htmlFor="signup-password" className="type-label-large2 text-on-surface">
+              Password
+            </label>
+            <input
+              id="signup-password"
+              type="password"
+              required
+              minLength={8}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="rounded-md border border-outline-variant bg-surface-container-lowest px-[var(--spacing-md)] py-[var(--spacing-sm)] text-on-surface outline-none transition-shadow focus:ring-2 focus:ring-primary"
+            />
+            <span className="type-body-small2 text-on-surface-variant">
+              At least 8 characters.
+            </span>
+          </div>
+
+          {error && (
+            <p className="type-body-small2 text-error">{error}</p>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="type-button2 mt-[var(--spacing-xs)] rounded-md bg-primary px-[var(--spacing-base)] py-[var(--spacing-sm)] text-white transition-colors hover:bg-secondary disabled:opacity-50"
+          >
+            {loading ? "Creating account…" : "Create account"}
+          </button>
+        </form>
+      </div>
+
+      <p className="type-body-medium2 mt-[var(--spacing-base)] text-center text-on-surface-variant">
         Already have an account?{" "}
-        <a href="/login" className="underline">
+        <a href="/login" className="font-medium text-secondary underline">
           Sign in
         </a>
       </p>
