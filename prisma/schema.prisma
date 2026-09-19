@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+
+  notes Note[]
+}
+
+model Note {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  storageKey String
+  mimeType   String
+
+  extractedTitle          String?
+  extractedBulletPoints   Json?
+  extractedActionItems    Json?
+  extractedDatesMentioned Json?
+
+  followUpAction String?
+  followUpResult Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  jobs Job[]
+
+  @@index([userId])
+}
+
+enum JobType {
+  extraction
+  follow_up
+}
+
+enum JobStatus {
+  pending
+  processing
+  completed
+  failed
+}
+
+model Job {
+  id     String @id @default(cuid())
+  noteId String
+  note   Note   @relation(fields: [noteId], references: [id])
+
+  type      JobType
+  status    JobStatus @default(pending)
+  attempts  Int       @default(0)
+  error     String?
+  rawOutput Json?
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  startedAt   DateTime?
+  completedAt DateTime?
+
+  @@index([noteId])
+  @@index([status])
+}
