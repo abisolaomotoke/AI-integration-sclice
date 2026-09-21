@@ -1,15 +1,17 @@
 export const config = {
-    openai: {
-        extractionModel: "gpt-4o-mini",
-        followUpModel: "gpt-4o-mini",
+    gemini: {
+        extractionModel: "gemini-3.6-flash",
+        followUpModel: "gemini-3.6-flash",
         extractionTemperature: 0.2,
         followUpTemperature: 0.5,
-        extractionMaxOutputTokens: 1000,
-        followUpMaxOutputTokens: 600,
+        extractionMaxOutputTokens: 8192,
+        followUpMaxOutputTokens: 2048,
         requestTimeoutMs: 30_000,
+        maxRetries: 3,
+        retryDelayMs: 2_000,
     },
     jobs: {
-        maxAttempts: 2,
+        maxAttempts: 4,
         maxConcurrency: 3,
         pollIntervalMs: 1500,
     },
