@@ -18,3 +18,18 @@ export const extractionJsonSchema = {
   },
   required: ["title", "bulletPoints", "actionItems", "datesMentioned"],
 } as const;
+
+export const followUpResultSchema = z.object({
+  action: z.enum(["summarize", "expand"]),
+  result: z.string().min(1).max(4000),
+});
+export type FollowUpResult = z.infer<typeof followUpResultSchema>;
+
+export const followUpJsonSchema = {
+  type: "object",
+  properties: {
+    action: { type: "string", enum: ["summarize", "expand"] },
+    result: { type: "string" },
+  },
+  required: ["action", "result"],
+} as const;
